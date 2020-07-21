@@ -32,4 +32,6 @@ class HowlongtobeatItem(scrapy.Item):
     game_genres = scrapy.Field()
     game_name_alias = scrapy.Field()
     game_description = scrapy.Field()
+    systems_available = scrapy.Field()
+    release_date = scrapy.Field()
 

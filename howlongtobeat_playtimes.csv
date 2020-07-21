@@ -1,201 +1,111 @@
-average_rating,game_ID,game_description,game_genres,game_name,game_name_alias,rating_count,time_to_beat_completionist,time_to_beat_completionist_count,time_to_beat_completionist_leisure,time_to_beat_completionist_rushed,time_to_beat_main_extras,time_to_beat_main_extras_count,time_to_beat_main_extras_leisure,time_to_beat_main_extras_rushed,time_to_beat_main_story,time_to_beat_main_story_count,time_to_beat_main_story_leisure,time_to_beat_main_story_rushed
+average_rating,game_ID,game_description,game_genres,game_name,game_name_alias,rating_count,release_date,systems_available,time_to_beat_completionist,time_to_beat_completionist_count,time_to_beat_completionist_leisure,time_to_beat_completionist_rushed,time_to_beat_main_extras,time_to_beat_main_extras_count,time_to_beat_main_extras_leisure,time_to_beat_main_extras_rushed,time_to_beat_main_story,time_to_beat_main_story_count,time_to_beat_main_story_leisure,time_to_beat_main_story_rushed
 ,,,,"
-The Last of Us Part II ",,,,,,,,,,,,,,
+Detroit: Become Human ",,,,,,,,,,,,,,,,
 ,,,,"
-God of War (2018) ",,,,,,,,,,,,,,
+Animal Crossing: New Horizons ",,,,,,,,,,,,,,,,
 ,,,,"
-Portal ",,,,,,,,,,,,,,
+Marvel's Spider-Man ",,,,,,,,,,,,,,,,
 ,,,,"
-The Legend of Zelda: Breath of the Wild ",,,,,,,,,,,,,,
+Dishonored ",,,,,,,,,,,,,,,,
 ,,,,"
-Portal 2 ",,,,,,,,,,,,,,
+Undertale ",,,,,,,,,,,,,,,,
 ,,,,"
-The Last of Us Remastered ",,,,,,,,,,,,,,
+Death Stranding ",,,,,,,,,,,,,,,,
 ,,,,"
-Tomb Raider (2013) ",,,,,,,,,,,,,,
+Dark Souls III ",,,,,,,,,,,,,,,,
 ,,,,"
-Grand Theft Auto V ",,,,,,,,,,,,,,
+Ori and the Blind Forest: Definitive Edition ",,,,,,,,,,,,,,,,
 ,,,,"
-BioShock ",,,,,,,,,,,,,,
+Yakuza 0 ",,,,,,,,,,,,,,,,
 ,,,,"
-Ghost of Tsushima ",,,,,,,,,,,,,,
+Star Wars Jedi: Fallen Order ",,,,,,,,,,,,,,,,
 ,,,,"
-The Witcher 3: Wild Hunt ",,,,,,,,,,,,,,
+Watch Dogs 2 ",,,,,,,,,,,,,,,,
 ,,,,"
-The Witcher 2: Assassins of Kings ",,,,,,,,,,,,,,
+Life Is Strange ",,,,,,,,,,,,,,,,
 ,,,,"
-Star Wars Jedi: Fallen Order ",,,,,,,,,,,,,,
+Nier: Automata ",,,,,,,,,,,,,,,,
 ,,,,"
-Life Is Strange ",,,,,,,,,,,,,,
+Rise of the Tomb Raider ",,,,,,,,,,,,,,,,
 ,,,,"
-Rise of the Tomb Raider ",,,,,,,,,,,,,,
+Assassin's Creed Origins ",,,,,,,,,,,,,,,,
 ,,,,"
-Yakuza 0 ",,,,,,,,,,,,,,
+Far Cry 3 ",,,,,,,,,,,,,,,,
 ,,,,"
-Nier: Automata ",,,,,,,,,,,,,,
+Pokémon Sword and Shield ",,,,,,,,,,,,,,,,
 ,,,,"
-Terraria ",,,,,,,,,,,,,,
+Shadow of the Tomb Raider ",,,,,,,,,,,,,,,,
 ,,,,"
-Resident Evil 7: Biohazard ",,,,,,,,,,,,,,
+Persona 5 ",,,,,,,,,,,,,,,,
 ,,,,"
-Final Fantasy VIII ",,,,,,,,,,,,,,
+Fallout: New Vegas ",,,,,,,,,,,,,,,,
 ,,,,"
-XCOM 2 ",,,,,,,,,,,,,,
+The Witcher ",,,,,,,,,,,,,,,,
 ,,,,"
-SaGa Frontier ",,,,,,,,,,,,,,
+Journey ",,,,,,,,,,,,,,,,
 ,,,,"
-Brothers: A Tale of Two Sons ",,,,,,,,,,,,,,
+Uncharted 4: A Thief's End ",,,,,,,,,,,,,,,,
 ,,,,"
-Ratchet & Clank (2016) ",,,,,,,,,,,,,,
+Batman: Arkham Asylum GOTY ",,,,,,,,,,,,,,,,
 ,,,,"
-Halo 3 ",,,,,,,,,,,,,,
+Batman: Arkham Knight ",,,,,,,,,,,,,,,,
 ,,,,"
-Sleeping Dogs: Definitive Edition ",,,,,,,,,,,,,,
+Super Mario Odyssey ",,,,,,,,,,,,,,,,
 ,,,,"
-Dead Cells ",,,,,,,,,,,,,,
+Metal Gear Solid V: The Phantom Pain ",,,,,,,,,,,,,,,,
 ,,,,"
-Final Fantasy XV ",,,,,,,,,,,,,,
+Resident Evil 2 (2019) ",,,,,,,,,,,,,,,,
 ,,,,"
-Helltaker ",,,,,,,,,,,,,,
+Half-Life 2 ",,,,,,,,,,,,,,,,
 ,,,,"
-Minecraft ",,,,,,,,,,,,,,
+Stardew Valley ",,,,,,,,,,,,,,,,
 ,,,,"
-Psychonauts ",,,,,,,,,,,,,,
+Hellblade: Senua's Sacrifice ",,,,,,,,,,,,,,,,
 ,,,,"
-The Wolf Among Us ",,,,,,,,,,,,,,
+The Witcher 2: Assassins of Kings ",,,,,,,,,,,,,,,,
 ,,,,"
-Resident Evil: HD Remaster ",,,,,,,,,,,,,,
+Celeste ",,,,,,,,,,,,,,,,
 ,,,,"
-Grand Theft Auto: Vice City ",,,,,,,,,,,,,,
+The Elder Scrolls V: Skyrim ",,,,,,,,,,,,,,,,
 ,,,,"
-Just Cause 3 ",,,,,,,,,,,,,,
+Final Fantasy VII Remake ",,,,,,,,,,,,,,,,
 ,,,,"
-Super Smash Bros. Ultimate ",,,,,,,,,,,,,,
+Borderlands 2 ",,,,,,,,,,,,,,,,
 ,,,,"
-Lifeless Planet ",,,,,,,,,,,,,,
+God of War (2018) ",,,,,,,,,,,,,,,,
 ,,,,"
-Devil May Cry 5 ",,,,,,,,,,,,,,
+Persona 5 Royal ",,,,,,,,,,,,,,,,
 ,,,,"
-Metro: Last Light Redux ",,,,,,,,,,,,,,
+Xenoblade Chronicles: Definitive Edition ",,,,,,,,,,,,,,,,
 ,,,,"
-Sonic Generations ",,,,,,,,,,,,,,
+BioShock 2 ",,,,,,,,,,,,,,,,
 ,,,,"
-Amnesia: The Dark Descent ",,,,,,,,,,,,,,
+Persona 4 Golden ",,,,,,,,,,,,,,,,
 ,,,,"
-Saints Row: The Third ",,,,,,,,,,,,,,
+Hollow Knight ",,,,,,,,,,,,,,,,
 ,,,,"
-Uncharted 2: Among Thieves ",,,,,,,,,,,,,,
+BioShock Infinite ",,,,,,,,,,,,,,,,
 ,,,,"
-Borderlands 3 ",,,,,,,,,,,,,,
+Assassin's Creed Odyssey ",,,,,,,,,,,,,,,,
 ,,,,"
-Assassin's Creed: Brotherhood ",,,,,,,,,,,,,,
+Red Dead Redemption 2 ",,,,,,,,,,,,,,,,
 ,,,,"
-L.A. Noire ",,,,,,,,,,,,,,
+Doom (2016) ",,,,,,,,,,,,,,,,
 ,,,,"
-South Park: The Stick of Truth ",,,,,,,,,,,,,,
+Portal ",,,,,,,,,,,,,,,,
 ,,,,"
-Chrono Trigger ",,,,,,,,,,,,,,
+Portal 2 ",,,,,,,,,,,,,,,,
 ,,,,"
-Dead Space ",,,,,,,,,,,,,,
+The Legend of Zelda: Breath of the Wild ",,,,,,,,,,,,,,,,
 ,,,,"
-The Messenger (2018) ",,,,,,,,,,,,,,
+The Last of Us Remastered ",,,,,,,,,,,,,,,,
 ,,,,"
-Batman: Arkham Origins ",,,,,,,,,,,,,,
+Tomb Raider (2013) ",,,,,,,,,,,,,,,,
 ,,,,"
-The Legend of Zelda: Link's Awakening (2019) ",,,,,,,,,,,,,,
+Grand Theft Auto V ",,,,,,,,,,,,,,,,
 ,,,,"
-Bloodborne ",,,,,,,,,,,,,,
+BioShock ",,,,,,,,,,,,,,,,
 ,,,,"
-SUPERHOT ",,,,,,,,,,,,,,
+The Witcher 3: Wild Hunt ",,,,,,,,,,,,,,,,
 ,,,,"
-Prey (2017) ",,,,,,,,,,,,,,
-,,,,"
-Spyro Reignited Trilogy ",,,,,,,,,,,,,,
-,,,,"
-A Plague Tale: Innocence ",,,,,,,,,,,,,,
-,,,,"
-Final Fantasy IX ",,,,,,,,,,,,,,
-,,,,"
-Half-Life 2: Episode Two ",,,,,,,,,,,,,,
-,,,,"
-The Stanley Parable (2013) ",,,,,,,,,,,,,,
-,,,,"
-Half-Life 2: Episode One ",,,,,,,,,,,,,,
-,,,,"
-Half-Life ",,,,,,,,,,,,,,
-,,,,"
-Divinity: Original Sin II ",,,,,,,,,,,,,,
-,,,,"
-Torchlight II ",,,,,,,,,,,,,,
-,,,,"
-Erica ",,,,,,,,,,,,,,
-,,,,"
-Deus Ex: Mankind Divided ",,,,,,,,,,,,,,
-,,,,"
-Yakuza Kiwami ",,,,,,,,,,,,,,
-,,,,"
-Assassin's Creed ",,,,,,,,,,,,,,
-,,,,"
-Outer Wilds ",,,,,,,,,,,,,,
-,,,,"
-ŌKAMI ",,,,,,,,,,,,,,
-,,,,"
-Wolfenstein: The New Order ",,,,,,,,,,,,,,
-,,,,"
-Mass Effect 2 ",,,,,,,,,,,,,,
-,,,,"
-Cuphead ",,,,,,,,,,,,,,
-,,,,"
-Borderlands: The Pre-Sequel! ",,,,,,,,,,,,,,
-,,,,"
-Alan Wake ",,,,,,,,,,,,,,
-,,,,"
-Mass Effect ",,,,,,,,,,,,,,
-,,,,"
-The Elder Scrolls V: Skyrim - Special Edition ",,,,,,,,,,,,,,
-,,,,"
-Mirror's Edge ",,,,,,,,,,,,,,
-,,,,"
-Fire Emblem: Three Houses ",,,,,,,,,,,,,,
-,,,,"
-Fallout 4 ",,,,,,,,,,,,,,
-,,,,"
-Final Fantasy VII ",,,,,,,,,,,,,,
-,,,,"
-Horizon Zero Dawn - Complete Edition ",,,,,,,,,,,,,,
-,,,,"
-Control ",,,,,,,,,,,,,,
-,,,,"
-Middle-Earth: Shadow of Mordor ",,,,,,,,,,,,,,
-,,,,"
-Batman: Arkham City GOTY ",,,,,,,,,,,,,,
-,,,,"
-Assassin's Creed IV: Black Flag ",,,,,,,,,,,,,,
-,,,,"
-Romancing SaGa ",,,,,,,,,,,,,,
-,,,,"
-Batman: Arkham Knight ",,,,,,,,,,,,,,
-,,,,"
-Super Mario Odyssey ",,,,,,,,,,,,,,
-,,,,"
-Half-Life 2 ",,,,,,,,,,,,,,
-,,,,"
-Metal Gear Solid V: The Phantom Pain ",,,,,,,,,,,,,,
-,,,,"
-Paper Mario: The Origami King ",,,,,,,,,,,,,,
-,,,,"
-Resident Evil 2 (2019) ",,,,,,,,,,,,,,
-,,,,"
-Stardew Valley ",,,,,,,,,,,,,,
-,,,,"
-Celeste ",,,,,,,,,,,,,,
-,,,,"
-Hellblade: Senua's Sacrifice ",,,,,,,,,,,,,,
-,,,,"
-Romancing SaGa 2 ",,,,,,,,,,,,,,
-,,,,"
-Assassin's Creed Origins ",,,,,,,,,,,,,,
-,,,,"
-Far Cry 3 ",,,,,,,,,,,,,,
-,,,,"
-Final Fantasy VII Remake ",,,,,,,,,,,,,,
+The Last of Us Part II ",,,,,,,,,,,,,,,,
