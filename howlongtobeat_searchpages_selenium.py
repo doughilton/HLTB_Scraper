@@ -28,9 +28,9 @@ number_of_pages = int(page_tab_elements[-1].text)
 
 search_url_list = [f'{search_url}{i+1}' for i in range(number_of_pages)]
 
- # Test with just the first 3 pages
-for search_page_url in search_url_list[:3]:
-# for search_page_url in search_url_list:
+# # Test with just the first 3 pages
+# for search_page_url in search_url_list[:3]:
+for search_page_url in search_url_list:
     driver.get(search_page_url)
 
     # Page seems to auto-refresh after loading.  Below try would succeed, then I get an error that element no longer exists when trying

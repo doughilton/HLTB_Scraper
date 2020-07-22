@@ -9,7 +9,7 @@ class HowlongtobeatItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
     game_name = scrapy.Field()
-    game_ID = scrapy.Field()
+    game_id = scrapy.Field()
 
     time_to_beat_main_story = scrapy.Field()
     time_to_beat_main_story_count = scrapy.Field()

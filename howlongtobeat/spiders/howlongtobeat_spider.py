@@ -9,14 +9,20 @@ class HowLongToBeatSpider(Spider):
     start_urls = ['https://howlongtobeat.com/game?id=']
 
     def parse(self, response):
-        # Small sample file for testing
-        with open('game_links_sample.csv', newline='') as f:
-        # with open('game_links.csv', newline='') as f:
+        # # Small sample file for testing
+        # with open('game_links_sample.csv', newline='') as f:
+        with open('game_links.csv', newline='') as f:
             reader = csv.reader(f)
             game_links = list(reader)
 
+        # # Limit for testing
+        # for game_link in game_links[:200]:
         for game_link in game_links:
-            yield Request(url=game_link[0], callback=self.parse_game_page)
+            game_id = game_link[0].split('id=')[1]
+
+            meta = {'game_id': game_id}
+
+            yield Request(url=game_link[0], callback=self.parse_game_page, meta=meta)
 
     def parse_game_page(self, response):
         game_name = response.xpath('//div[@class="profile_header shadow_text"]/text()').extract_first()  
@@ -28,6 +34,9 @@ class HowLongToBeatSpider(Spider):
         rating_count = self.convert_user_count_to_float(rating_count)
 
         play_times = response.xpath('//table[@class="game_main_table"]/tbody[@class="spreadsheet"]')
+
+        time_to_beat_main_extras = None
+        time_to_beat_completionist = None
 
         for play_time in play_times:
             play_style = play_time.xpath('.//tr/td/text()').extract()
@@ -49,6 +58,15 @@ class HowLongToBeatSpider(Spider):
                 time_to_beat_completionist_rushed = self.convert_game_time_to_minutes(play_style[4])
                 time_to_beat_completionist_leisure = self.convert_game_time_to_minutes(play_style[5])
 
+        game_description = None
+
+        game_description = response.xpath('//div[@id="global_site"]//div[@class="in back_primary shadow_box"]/p//text()').extract()  
+        if (len(game_description) > 0): 
+            game_description = list(map(str.strip, game_description))
+            if '...Read More' in game_description:
+                game_description.remove('...Read More')
+            game_description = ' '.join(game_description)
+
         game_name_alias = None
         systems_available = None
         game_genres = None
@@ -59,7 +77,8 @@ class HowLongToBeatSpider(Spider):
         for game_detail in game_details:
             game_detail_fields = game_detail.xpath('.//text()').extract()
             game_detail_fields = list(map(str.strip, game_detail_fields))
-            game_detail_fields.remove('') 
+            while '' in game_detail_fields:
+                game_detail_fields.remove('') 
 
             if (game_detail_fields[0] == 'Alias:'):
                 game_name_alias = game_detail_fields[1]
@@ -72,6 +91,7 @@ class HowLongToBeatSpider(Spider):
 
         item = HowlongtobeatItem()
         item['game_name'] = game_name
+        item['game_id'] = response.meta['game_id']
         item['average_rating'] = average_rating
         item['rating_count'] = rating_count
 
@@ -80,15 +100,17 @@ class HowLongToBeatSpider(Spider):
         item['time_to_beat_main_story_rushed'] = time_to_beat_main_story_rushed
         item['time_to_beat_main_story_leisure'] = time_to_beat_main_story_leisure
 
-        item['time_to_beat_main_extras'] = time_to_beat_main_extras
-        item['time_to_beat_main_extras_count'] = time_to_beat_main_extras_count
-        item['time_to_beat_main_extras_rushed'] = time_to_beat_main_extras_rushed
-        item['time_to_beat_main_extras_leisure'] = time_to_beat_main_extras_leisure
+        if (time_to_beat_main_extras):
+            item['time_to_beat_main_extras'] = time_to_beat_main_extras
+            item['time_to_beat_main_extras_count'] = time_to_beat_main_extras_count
+            item['time_to_beat_main_extras_rushed'] = time_to_beat_main_extras_rushed
+            item['time_to_beat_main_extras_leisure'] = time_to_beat_main_extras_leisure
 
-        item['time_to_beat_completionist'] = time_to_beat_completionist
-        item['time_to_beat_completionist_count'] = time_to_beat_completionist_count
-        item['time_to_beat_completionist_rushed'] = time_to_beat_completionist_rushed
-        item['time_to_beat_completionist_leisure'] = time_to_beat_completionist_leisure
+        if (time_to_beat_completionist):
+            item['time_to_beat_completionist'] = time_to_beat_completionist
+            item['time_to_beat_completionist_count'] = time_to_beat_completionist_count
+            item['time_to_beat_completionist_rushed'] = time_to_beat_completionist_rushed
+            item['time_to_beat_completionist_leisure'] = time_to_beat_completionist_leisure
 
         if (game_name_alias):
             item['game_name_alias'] = game_name_alias
@@ -98,6 +120,8 @@ class HowLongToBeatSpider(Spider):
             item['game_genres'] = game_genres
         if (north_america_release_date):
             item['north_america_release_date'] = north_america_release_date
+        if (game_description):
+            item['game_description'] = game_description
 
         yield item
 
@@ -112,14 +136,8 @@ class HowLongToBeatSpider(Spider):
 
     def convert_game_time_to_minutes(self, game_time_to_convert):
         game_time_to_convert = game_time_to_convert.strip()
-        print('='*50)
-        print(f'original time {game_time_to_convert}')
-        print('='*50)
         time_to_beat = re.findall('(\d+[hm]?) ?(\d*m?)', game_time_to_convert)
         time_in_minutes = 0
-        print('='*50)
-        print(f'time to beat {time_to_beat[0]}')
-        print('='*50)
         for time in time_to_beat[0]:
             if(time == ''):
                 continue
