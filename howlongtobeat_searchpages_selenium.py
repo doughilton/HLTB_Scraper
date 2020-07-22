@@ -54,7 +54,6 @@ for search_page_url in search_url_list[:3]:
              # Check that the game includes a Main Story and that a significant number of users have submitted data (based on color coding grabbed from class)
             if ((playstyle_types[0].text == 'Main Story') & (playstyle_types[1].get_attribute('class') in ['search_list_tidbit center time_70', 'search_list_tidbit center time_80', 'search_list_tidbit center time_90', 'search_list_tidbit center time_100'])):
                 game_urls.append(page_tab_element.find_element_by_xpath('.//h3/a').get_property('href'))
-            else:
         except:
             continue
 
