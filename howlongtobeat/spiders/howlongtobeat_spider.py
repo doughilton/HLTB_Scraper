@@ -84,7 +84,7 @@ class HowLongToBeatSpider(Spider):
                 game_name_alias = game_detail_fields[1]
             elif (game_detail_fields[0] == 'Playable On:'):
                 systems_available = game_detail_fields[1]
-            elif (game_detail_fields[0] == 'Genres:'):
+            elif ((game_detail_fields[0] == 'Genres:') | (game_detail_fields[0] == 'Genre:')):
                 game_genres = game_detail_fields[1]
             elif (game_detail_fields[0] == 'NA:'):
                 north_america_release_date = game_detail_fields[1]
@@ -125,6 +125,7 @@ class HowLongToBeatSpider(Spider):
 
         yield item
 
+    # Some counts stored as string, e.g. "1.7k"
     def convert_user_count_to_float(self, user_count_to_convert):
         user_count_to_convert = user_count_to_convert.strip()
         if (user_count_to_convert[-1] == 'K'):
@@ -134,6 +135,7 @@ class HowLongToBeatSpider(Spider):
 
         return user_count_to_convert
 
+    # Convert all playtimes from "27h 45m" to minutes in int for comparisons
     def convert_game_time_to_minutes(self, game_time_to_convert):
         game_time_to_convert = game_time_to_convert.strip()
         time_to_beat = re.findall('(\d+[hm]?) ?(\d*m?)', game_time_to_convert)

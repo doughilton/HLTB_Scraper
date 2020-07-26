@@ -1,0 +1,6 @@
+The purpose of this project is to determine if there are any correlations between video game genres, user play time for the game, and the average rating the game has.  If there are correlations we can theorize why they might exist and speak to what might warrant further investigation.  Using this data a game company could better direct how they would approach creating a new game of a particular genre as well as marketing the game.
+
+Each game may have multiple play styles listed with different times for each.  We should determine if play style is also a factor in any correlation we find.
+
+Finally, we'll also investigate game descriptions.   We'll do this by running sentiment analysis to again determine any correlations between play time and rating, this time based on polarity or subjectivity of the text.
+

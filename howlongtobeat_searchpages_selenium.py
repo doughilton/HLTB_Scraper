@@ -22,9 +22,8 @@ except:
 finally:
     pass
 
+# Pulls the total number of pages from the final page tab button on the Search page
 number_of_pages = int(page_tab_elements[-1].text)
-
-# print(f'There are {number_of_pages} total pages to scrape.')
 
 search_url_list = [f'{search_url}{i+1}' for i in range(number_of_pages)]
 
@@ -56,8 +55,6 @@ for search_page_url in search_url_list:
                 game_urls.append(page_tab_element.find_element_by_xpath('.//h3/a').get_property('href'))
         except:
             continue
-
-    # game_urls = [page_tab_element.find_element_by_xpath('.//h3/a').get_property('href') for page_tab_element in page_tab_elements]
     
     for game_url in game_urls:
         writer.writerow([game_url])
